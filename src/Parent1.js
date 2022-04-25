@@ -6,22 +6,23 @@ import { connect } from 'react-redux'
 class Parent1 extends React.Component{
 
   componentDidMount(){
-    this.props.fetchCards
+    this.props.fetchCards()
+    console.log("here in Parent1")
   }
 
   render(){
+    // debugger
     return(
       <div>
         Hello from Parent1
         <Child1 cards={this.props.cards}/>
       </div>
     )
-
-    const mapStateToProps = (state) =>{
-      return {
-        cards: state.cards
-      }
-    }
+  }
+}
+const mapStateToProps = (state) =>{
+  return {
+    cards: state.cards
   }
 }
 export default connect(mapStateToProps, {fetchCards})(Parent1)

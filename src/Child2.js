@@ -1,15 +1,14 @@
-import React from 'react'
 
-class Child2 extends React.Component{
 
-render(){
-  return(
+const Child2 = ({characters}) => {
+console.log(characters)
+  return ( 
     <div>
-      Hello from Child2
+       Hi from Child1!
+      {characters.results.map(character=>
+        <div><img src={character.image}/></div>)}
     </div>
-  )
+   );
 }
-
-
-}
-export default Child2
+ 
+export default Child2;

@@ -1,10 +1,14 @@
 export function fetchCharacters() {
+  // return () =>{
+
   return (dispatch) =>{
     fetch('https://rickandmortyapi.com/api/character')
     .then(r=>r.json())
-    .then(cards=>dispatch({
+    // .then(characters=>console.log(characters))
+    .then(characters=>dispatch({
       type: "FETCH_CHARACTERS",
-      payload: cards.sort((a,b)=>a.id - b.id)
-    }))
+      payload: characters
+    })
+    )
   }
 }

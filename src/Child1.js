@@ -1,15 +1,10 @@
-import React from 'react'
+const Child1 = ({cards}) => {
 
-class Child1 extends React.Component{
-
-render(){
-  return(
+  return ( 
     <div>
-      Hello from Child1
+      Hi from Child1!
     </div>
-  )
+   );
 }
-
-
-}
-export default Child1
+ 
+export default Child1;
