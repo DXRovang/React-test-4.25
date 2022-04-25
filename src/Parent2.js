@@ -14,7 +14,7 @@ class Parent2 extends React.Component{
     return(
       <div>
         Hello from Parent2
-        <Child2 characters={this.props.characters}/>
+        {this.props.characters && <Child2 characters={this.props.characters}/>}
       </div>
     )
   }

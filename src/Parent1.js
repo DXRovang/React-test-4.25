@@ -11,7 +11,6 @@ class Parent1 extends React.Component{
   }
 
   render(){
-    // debugger
     return(
       <div>
         Hello from Parent1

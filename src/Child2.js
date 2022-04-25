@@ -1,12 +1,12 @@
 
 
 const Child2 = ({characters}) => {
-console.log(characters)
+
   return ( 
     <div>
-       Hi from Child1!
-      {characters.results.map(character=>
-        <div><img src={character.image}/></div>)}
+       Hi from Child2!
+      {characters ? characters.results.map(character=>
+        <div><img alt="rick and morty" src={character.image}/></div>): null}
     </div>
    );
 }
